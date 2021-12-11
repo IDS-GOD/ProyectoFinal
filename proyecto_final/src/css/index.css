@@ -1,0 +1,13 @@
+.form-group {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-group > label {
+  display: block;
+}
+
+#map {
+  width: calc(100vw - 15px);
+  height: 500px;
+}
