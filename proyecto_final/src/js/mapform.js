@@ -1,4 +1,5 @@
 
+let marker= "";
 document.addEventListener("DOMContentLoaded", () => {
     mapboxgl.accessToken = 'pk.eyJ1Ijoib3NpZXJyYTE5IiwiYSI6ImNreDAxdzV1NzA1MW8ycnBhaHFnaDdweG4ifQ.0DRvsj3CH5HpObiD7QpGSQ';
     const map = new mapboxgl.Map({
@@ -8,12 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
     zoom: 13,
     });
 
-    const marker = new mapboxgl.Marker({
+      marker = new mapboxgl.Marker({
         draggable: true,
       })
         .setLngLat([-110.32107573883633, 24.107302393510377])
         .addTo(map);
-
+        // document.getElementById("latitud").value = marker.getLngLat().lat;
+        // document.getElementById("longitud").value = marker.getLngLat().lng;
 
         const $markerPosition = document.getElementById("currentPosition");
 

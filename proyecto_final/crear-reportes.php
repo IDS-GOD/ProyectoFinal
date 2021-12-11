@@ -1,3 +1,13 @@
+<?php
+  include_once($_SERVER["DOCUMENT_ROOT"]."/api/v1/controllers/User.php");
+  $userController = new User(false);
+  if(!$userController->isLoggedIn()) {
+    header("Location: /");
+  }else{
+    $idusuario=$_SESSION["user"];
+  }
+  
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -26,7 +36,7 @@
 
   <?php 
   include_once($_SERVER["DOCUMENT_ROOT"]."/components/mapForm.php");
-  include_once($_SERVER["DOCUMENT_ROOT"]."/components/report.php");?>
+  // include_once($_SERVER["DOCUMENT_ROOT"]."/components/report.php");?>
   </section>
 <?php
     include_once($_SERVER["DOCUMENT_ROOT"]."/components/template/footer.php");
